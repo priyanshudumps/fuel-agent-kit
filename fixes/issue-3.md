@@ -1,0 +1,1 @@
+The repository was missing a README file, so I created a basic README with an overview of the project. This can be verified by checking the inclusion of the newly created 'README.md' file in the repository.
