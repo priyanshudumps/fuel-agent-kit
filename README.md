@@ -20,7 +20,7 @@ Fuel Agent Kit 是一个用于 Fuel 区块链网络的 AI 代理工具包。它�
 
 ```bash
 # 克隆仓库
-git clone https://github.com/priyanshudumps/fuel-agent-kit.git
+git clone https://github.com/HNR138/fuel-agent-kit.git
 
 # 进入项目目录
 cd fuel-agent-kit
