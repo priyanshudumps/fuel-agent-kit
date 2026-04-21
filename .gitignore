@@ -45,3 +45,11 @@ htmlcov/
 # MyPy
 .mypy_cache/
 .dmypy.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+package-lock.json

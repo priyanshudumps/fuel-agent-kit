@@ -68,14 +68,15 @@ class FuelAgent:
         if not self._wallet_private_key:
             raise ValueError("Fuel wallet private key is required.")
         
-        # Initialize AI agent executor
+        # Initialize the real DeepSeek-powered agent executor
         self._agent_executor = create_agent(
-            self,
-            self._model,
-            self._openai_api_key,
-            self._anthropic_api_key,
-            self._google_gemini_api_key,
+            fuel_agent=self,
+            model=self._model,
+            api_key=self._openai_api_key,
+            anthropic_api_key=self._anthropic_api_key,
+            google_gemini_api_key=self._google_gemini_api_key,
         )
+
     
     def get_credentials(self) -> Dict[str, str]:
         """
@@ -93,18 +94,11 @@ class FuelAgent:
     
     async def execute(self, input_text: str) -> Dict[str, Any]:
         """
-        Execute a natural language command.
-        
-        Args:
-            input_text: Natural language instruction
-            
-        Returns:
-            Agent response with execution result
+        Execute a natural language command using the real DeepSeek engine.
         """
-        response = await self._agent_executor.ainvoke({
-            "input": input_text,
-        })
-        return response
+        # Return the actual result from our DeepSeek Agent
+        return await self._agent_executor.run(input_text)
+
     
     async def swap_exact_input(
         self,

@@ -20,7 +20,7 @@
   "author": "Dhai <dhaiwatpandya@gmail.com> (https://twitter.com/dhaiwat10)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dhaiwat10/fuel-agent-kit"
+    "url": "git+https://github.com/dhaiwat10/fuel-agent-kit.git"
   },
   "license": "MIT",
   "files": [
@@ -32,7 +32,7 @@
     "@changesets/cli": "^2.27.7",
     "prettier": "^3.3.3",
     "tsup": "^8.2.4",
-    "typescript": "^5.5.4",
+    "typescript": "^5.9.3",
     "vitest": "^2.0.5"
   },
   "dependencies": {
@@ -42,12 +42,14 @@
     "@langchain/openai": "^0.3.14",
     "@pythnetwork/hermes-client": "^1.2.0",
     "@pythnetwork/pyth-fuel-js": "^1.0.7",
+    "@types/node": "^25.6.0",
     "langchain": "^0.3.7",
     "mira-dex-ts": "^1.0.42",
+    "ts-node": "^10.9.2",
     "zod": "^3.24.1"
   },
   "peerDependencies": {
-    "fuels": "^0.96.1"
+    "fuels": "^0.103.0"
   },
   "scripts": {
     "build": "tsup",
@@ -58,5 +60,9 @@
     "check-format": "prettier --check .",
     "check-exports": "attw --pack .",
     "local-release": "npm run ci && changeset version && changeset publish"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "tests"
   }
 }
