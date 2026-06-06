@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "fuel-agent-kit"
+version = "0.1.0"
+description = "An AI agent for Fuel - Python Implementation"
+authors = ["Ojaswee Upadhyay <ojaswee2095@gmail.com>"]
+readme = "README.md"
+packages = [{include = "fuel_agent_kit", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = "^0.1.0"
+langchain-openai = "^0.0.5"
+langchain-anthropic = "^0.1.0"
+langchain-google-genai = "^0.0.9"
+pydantic = "^2.0.0"
+requests = "^2.31.0"
+fuels = "^0.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
